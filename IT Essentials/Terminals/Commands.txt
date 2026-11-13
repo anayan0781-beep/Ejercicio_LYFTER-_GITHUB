@@ -1,0 +1,44 @@
+# IT ESSENTIALS - TERMINALES
+# Ejercicios de PowerShell
+
+# 1. Crear tres carpetas en el escritorio
+# Primero ubicarse en el escritorio.
+mkdir Empleado1
+mkdir Empleado2
+mkdir Empleado3
+dir
+
+# 2. Crear archivos de texto
+New-Item .\Empleado1\bienvenida1.txt -ItemType File
+New-Item .\Empleado2\bienvenida2.txt -ItemType File
+New-Item .\Empleado3\bienvenida3.txt -ItemType File
+
+# 3. Crear Empleados y mover las carpetas
+mkdir Empleados
+Move-Item Empleado1 Empleados
+Move-Item Empleado2 Empleados
+Move-Item Empleado3 Empleados
+
+# 4. Listar los procesos del sistema
+tasklist
+
+# 5. Comprobar la conexion
+ping 8.8.8.8
+
+# 6. Abrir y cerrar una aplicacion
+notepad
+Get-Process notepad
+# Sustituir el numero por el PID real:
+# taskkill /F /PID 17664
+
+# 7. Mostrar la hora del sistema
+Get-Date -Format "HH:mm:ss"
+
+# 8. Renombrar los archivos
+Rename-Item .\Empleados\Empleado1\bienvenida1.txt welcome.txt
+Rename-Item .\Empleados\Empleado2\bienvenida2.txt welcome.txt
+Rename-Item .\Empleados\Empleado3\bienvenida3.txt welcome.txt
+
+# 9. Eliminar la carpeta Empleados
+# Ejecutar solo cuando se haya verificado la carpeta.
+# Remove-Item .\Empleados -Recurse -Force

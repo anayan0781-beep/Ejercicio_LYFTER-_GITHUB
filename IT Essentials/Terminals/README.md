@@ -1,1 +1,1 @@
-Terminal_Lyfter_Exercises
+Lyfter_Terminal_Exercises.
